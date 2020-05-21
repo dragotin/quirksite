@@ -6,6 +6,7 @@ description: A small utility to generate PDFs from images or scans in an easy an
 github:
   zip_url: https://github.com/dragotin/pdfquirk/archive/master.zip
   repository_name: pdfquirk
+  repository_url: https://github.com/dragotin/qdfquirk
   is_project_page: true
   owner_url: https://github.com/dragotin
   
