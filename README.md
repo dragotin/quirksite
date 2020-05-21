@@ -4,7 +4,7 @@ PDF Quirk is a utility to create PDFs from images easily and fast. The images ca
 
 It is just a little office helper tool to generate PDFs easily to share them online.
 
-[[https://github.com/dragotin/pdfquirk/blob/master/resources/screenshot1.png]]
+![Screenshot](https://github.com/dragotin/pdfquirk/blob/master/resources/screenshot1.png)
 
 PDF Quirk uses the very well functioning tools convert from ImageMagick and scanimage from the SANE project instead of reinventing the wheel.
 
