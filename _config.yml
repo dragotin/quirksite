@@ -1,1 +1,5 @@
 theme: jekyll-theme-dinky
+
+title: PDF Qurik
+description: A small utility to generate PDFs from images or scans in an easy and fast way.
+
