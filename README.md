@@ -12,7 +12,7 @@ PDF Quirk uses the very well functioning tools `convert` from [ImageMagick](http
 
 ### Releases
 
-The first public release of PDF Quirk has the version number 0.9 and is available from the [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.9). 
+The first public release of PDF Quirk has the version number 0.9 and is available from the [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.9).
 
 ### Packages
 
@@ -22,13 +22,38 @@ As soon as PDF Quirk improves, it will make it's way into the repositories of di
 
 ### Building from Source
 
-Currently, the PDF Quirk source code can be cloned on the [Github page](https://github.com/dragotin/pdfquirk). 
+Currently, the PDF Quirk source code can be cloned on the [Github page](https://github.com/dragotin/pdfquirk).
 
 ## Configuration
 
-To scan with PDF Quirk, an optimal `scanimage` command for the scanner device must be configured. Since all the scanner devices are so different and offer different scanner options, it does not make too much sense to use a default here.
+### SANE scanimage
+
+PDF Quirk uses the command line utility `scanimage` to produce images from the scanner. It comes with the SANE packages which are standard for scanners under linux.
+
+To scan with PDF Quirk, an optimal `scanimage` command for the scanner device must be found and put into the configuration. Since all the scanner devices are so different and offer different scan options, it does not make too much sense to use a default here.
+
+To get a reasonable result for the PDF, the scan should
+
+1. have a resolution of 150 or 200 dpi.
+2. be scanned in mode Grayscale for monochrome of Color.
+3. not have a too big color depth
+
+Also be sure to configure the right scan size. PDF Quirk assumes that a whole page
+is scanned.
 
 To learn more about the SANE project and the scanimage tool, refer to the [scanimage manpage](http://www.sane-project.org/man/scanimage.1.html) for details.
+
+If you have a better way of producing images, it is also possible to make PDF Quirk use that.
+
+### Configuration
+
+To configure PDF Quirk, open the configuration area by clicking the Configure menu item. Two editable line allow to apply a command line for monochrome and color scan.
+
+Note that `scanimage` by default sends the scanned image to standard out. PDF Quirk is prepared to that and reads it from there.
+
+If another tool should be used that writes its output directly to a file rather than  to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).s
+
+**Attention**: To quote command line parameters which contain spaces only the use of *single quotes* is supported. Do not use double quotes, as PDF Quirks parser can not properly deal with that.
 
 ## Contributions
 
