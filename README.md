@@ -11,6 +11,7 @@ PDF Quirk uses the very well functioning tools `convert` from [ImageMagick](http
 ## Downloads and Releases
 
 ### Releases
+The current public release is version 0.91. It is available from the  [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.91).
 
 The first public release of PDF Quirk has the version number 0.9 and is available from the [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.9).
 
