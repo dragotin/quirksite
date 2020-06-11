@@ -29,9 +29,25 @@ With the AppImage, PDF Quirk can be used on most Linux installations right away.
 
 ### Building from Source
 
-Currently, the PDF Quirk source code can be cloned on the [Github page](https://github.com/dragotin/pdfquirk).
+The PDF Quirk source code development branch can be cloned on the [Github page](https://github.com/dragotin/pdfquirk). 
 
-It needs a Qt 5.x development setup to be compiled. On runtime, it needs convert from ImageMagick and scanimage from SANE for scanning.
+Stable release tarballs can be found on the [Github release page](https://github.com/dragotin/pdfquirk/releases).
+
+To build PDF Quirk, a Qt 5.x development setup is needed. 
+
+Unpack the source archive and go to the top directory of the source. From there, perform the following steps:
+
+```
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+make
+make install
+```
+
+This will install pdfquirk to `/usr/local/bin` on the computer. 
+
+On runtime, the tool `convert` from [ImageMagick](https://imagemagick.org/script/convert.php) is needed to convert to pdf. The utility `scanimage` from SANE is used for scanning (optional). It is recommended to install these through the package manager of the Linux distribution.
 
 ## Configuration
 
@@ -60,7 +76,7 @@ To configure PDF Quirk, open the configuration area by clicking the Configure me
 
 Note that `scanimage` by default sends the scanned image to standard out. PDF Quirk is prepared to that and reads it from there.
 
-If another tool should be used that writes its output directly to a file rather than  to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).s
+If another tool should be used to create PDF that writes its output directly to a file rather than to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).s
 
 **Attention**: To quote command line parameters which contain spaces only the use of *single quotes* is supported. Do not use double quotes, as PDF Quirks parser can not properly deal with that.
 
