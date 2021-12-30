@@ -43,7 +43,7 @@ As PDF Quirk improves, it will make it's way into the repositories of distributi
 
 ### AppImage
 
-PDF Quirk is available as an automatic built [AppImage](https://appimage.org/). It can be [downloaded from Github](https://github.com/dragotin/pdfquirk/releases/tag/continuous).
+PDF Quirk is available as an automatic built [AppImage](https://appimage.org/). It can be [downloaded from Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
 
 With the AppImage, PDF Quirk can be used on most Linux installations right away. Just download the file, add executable permissions, and run. [How to run an AppImage](https://docs.appimage.org/introduction/quickstart.html#how-to-run-an-appimage)
 
