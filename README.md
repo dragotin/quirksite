@@ -1,27 +1,45 @@
 # PDF Quirk
 
-PDF Quirk is a utility to create PDFs from images easily and fast. The images can either be loaded from storage or directly be scanned.
 
-It is just a little office helper tool to generate PDFs easily to share them online.
+PDF Quirk is a little office helper tool to generate PDFs from images easily and fast to share them online.
+
+The source images can either be loaded from disk or directly be acquired from a scan device.
 
 ![Screenshot](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot1.png)
 
-PDF Quirk uses the very well functioning tools `convert` from [ImageMagick](https://imagemagick.org/index.php) and `scanimage` from the [SANE project](http://www.sane-project.org/) instead of reinventing the wheel.
+PDF Quirk utilizes specialized open source tools rather than reinventing the wheel.
+
+For PDF generation it uses the very well working tool [img2pdf](https://pypi.org/project/img2pdf/). To scan, it drives `scanimage` from the [SANE project](http://www.sane-project.org/). In a sense, PDF Quirk is a UI for these tools.
+
+## Features
+
+These features are supported by PDF Quirk:
+
+- Simple yet powerful and nice user interface for exactly one job.
+- Creation of high quality multi page PDF documents from images.
+- Small PDF file size, yet high quality.
+- Support for scanners through the SANE package.
+- Basic image manipulation like rotating images or sequence change.
+- Deskewing of scanned images
+- Basic PDF output options like margin, paper size and -orientation.
 
 ## Downloads and Releases
 
+PDF Quirk is maintained on [Github](https://github.com/dragotin/pdfquirk).
+
+The recommended way of using PDF Quirk is either via packages from the distribution or via the AppImage that can be downloaded here.
+
 ### Releases
-The current public release is version 0.93 which was released on June, 29th, 2020. 
 
-It is available from the  [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.93).
+The current public release is version 0.95 which was released on December, 30th, 2021. [Changelog](Changelog.md)
 
-The first public release of PDF Quirk has the version number 0.9 and is available from the [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.9).
+It is available from the  [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
 
 ### Packages
 
-Not many distros are packaging it PDF Quirk yet - but packages for openSUSE are available from my [openSUSE Buildservice Page](https://software.opensuse.org/package/pdfquirk).
+Not many Linux distros are packaging PDF Quirk yet - but packages for openSUSE are available from my [openSUSE Buildservice Page](https://software.opensuse.org/package/pdfquirk).
 
-As soon as PDF Quirk improves, it will make it's way into the repositories of distributions.
+As PDF Quirk improves, it will make it's way into the repositories of distributions. Stay tuned.
 
 ### AppImage
 
@@ -31,11 +49,11 @@ With the AppImage, PDF Quirk can be used on most Linux installations right away.
 
 ### Building from Source
 
-The PDF Quirk source code development branch can be cloned on the [Github page](https://github.com/dragotin/pdfquirk). 
+The PDF Quirk source code development branch can be cloned on the [Github page](https://github.com/dragotin/pdfquirk).
 
 Stable release tarballs can be found on the [Github release page](https://github.com/dragotin/pdfquirk/releases).
 
-To build PDF Quirk, a Qt 5.x development setup is needed. 
+To build PDF Quirk, a Qt 5.x or Qt 6.x development setup is needed.
 
 Unpack the source archive and go to the top directory of the source. From there, perform the following steps:
 
@@ -47,17 +65,24 @@ make
 make install
 ```
 
-This will install pdfquirk to `/usr/local/bin` on the computer. 
+This will install pdfquirk to `/usr/local/bin` on the computer.
 
-On runtime, the tool `convert` from [ImageMagick](https://imagemagick.org/script/convert.php) is needed to convert to pdf. The utility `scanimage` from SANE is used for scanning (optional). It is recommended to install these through the package manager of the Linux distribution.
+### Runtime Dependencies
+
+At runtime, the tool [convert](https://imagemagick.org/script/convert.php) from the [ImageMagick](https://imagemagick.org/script/index.php)-package is needed. The utility `scanimage` from SANE is used for scanning (optional).
+It is recommended to install these through the package manager of the Linux distribution unless PDF Quirk is used through the AppImage.
+
+To use deskewing for images, PDF Quirk optionally supports the tool [deskew](https://galfar.vevb.net/wp/projects/deskew/). If it is installed and available, it will be used to deskew images. Otherwise the convert deskew function is used.
 
 ## Configuration
+
+To configure PDF Quirk, open the configuration area by clicking the Configure menu item. Two editable lines allow to set a command line for monochrome and color scan.
 
 ### SANE scanimage
 
 PDF Quirk uses the command line utility `scanimage` to produce images from the scanner. It comes with the SANE packages which are standard for scanners under linux.
 
-To scan with PDF Quirk, an optimal `scanimage` command for the scanner device must be found and put into the configuration. Since all the scanner devices are so different and offer different scan options, it does not make too much sense to use a default here.
+To scan with PDF Quirk, an optimal `scanimage` command for the scanner device must be found and put into the configuration. Since all the scanner devices are so different and offer different scan options, it does not make too much sense to set a default here.
 
 To get a reasonable result for the PDF, the scan should
 
@@ -65,28 +90,34 @@ To get a reasonable result for the PDF, the scan should
 2. be scanned in mode Grayscale for monochrome of Color.
 3. not have a too big color depth
 
-Also be sure to configure the right scan size. PDF Quirk assumes that a whole page
-is scanned.
+Also be sure to configure the right scan size. PDF Quirk assumes that a whole page is scanned.
 
 To learn more about the SANE project and the scanimage tool, refer to the [scanimage manpage](http://www.sane-project.org/man/scanimage.1.html) for details.
 
 If you have a better way of producing images, it is also possible to make PDF Quirk use that.
 
-### Configuration
+`scanimage` by default sends the scanned image data to standard out. PDF Quirk is prepared to that and reads it from there.
 
-To configure PDF Quirk, open the configuration area by clicking the Configure menu item. Two editable line allow to apply a command line for monochrome and color scan.
+A typical scanimage command line might look like
+```
+scanimage --mode '24bit Color[Fast]' --resolution 150 -l 0 -t 0 -x 210 -y 297 --format png
+```
 
-Note that `scanimage` by default sends the scanned image to standard out. PDF Quirk is prepared to that and reads it from there.
+If another tool should be used to create PDF that writes its output directly to a file rather than to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).
 
-If another tool should be used to create PDF that writes its output directly to a file rather than to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).s
+**Attention**: To quote command line parameters which contain spaces, use*single quotes*. Do not use double quotes, as PDF Quirks parser can not properly deal with that.
 
-**Attention**: To quote command line parameters which contain spaces only the use of *single quotes* is supported. Do not use double quotes, as PDF Quirks parser can not properly deal with that.
+### PDF Options
+
+Since version 0.95 PDF Quirk supports some basic PDF options. On the configuration page, user can set the page size, the page orientation and the page margin.
+
+![PDF Options](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot_configoptions.png)
+
+The settings are adjusted for all subsequent PDF creations.
 
 ## Contributions
 
 Please report wishes and bugs in the [Issue Tracker](https://github.com/dragotin/pdfquirk/issues).
 
 Pull requests that change code are very welcome!
-
-
 
