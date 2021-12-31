@@ -9,8 +9,6 @@ The source images can either be loaded from disk or directly be acquired from a 
 
 PDF Quirk utilizes specialized open source tools rather than reinventing the wheel.
 
-For PDF generation it uses the very well working tool [img2pdf](https://pypi.org/project/img2pdf/). To scan, it drives `scanimage` from the [SANE project](http://www.sane-project.org/). In a sense, PDF Quirk is a UI for these tools.
-
 ## Features
 
 These features are supported by PDF Quirk:
