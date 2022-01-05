@@ -1,19 +1,19 @@
 # PDF Quirk
 
 
-**PDF Quirk** es una pequeña herramienta de oficinna de ayuda para generar archivos PDF a partir de imágenes de manera fácil y rápida para compartirlos en línea.
+**PDF Quirk** es una pequeña herramienta de oficina de ayuda para generar archivos PDF a partir de imágenes de manera fácil y rápida para compartirlos en línea.
 
-El origen de las imágenes pueden cargarse desde el disco de nuestro equipo u obtenerlas directamente desde un escáner.
+Admite el origen de las imágenes desde un medio de almacenamiento de nuestro equipo u obtenerlas directamente desde un escáner.
 
 ![Screenshot](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot1.png)
 
-**PDF Quirk** utiliza herramientas de código abierto especializadas en vez de reinventar la rueda.
+**PDF Quirk** utiliza herramientas de código abierto especializadas, en vez de reinventar la rueda.
 
 ## Características
 
 Estas son las funcionalidades que tiene **PDF Quirk**:
 
-- Una interfaz simple aunque potente agradable de utilizar para hacer exactamente su trabajo.
+- Una interfaz simple aunque potente, agradable de utilizar para hacer exactamente su trabajo.
 - Creación de documentos PDF multipáginas de alta calidad desde imágenes.
 - Archivos PDF de pequeño tamaño, aunque de alta calidad.
 - Soporte para escáneres a través del paquete SANE.
@@ -25,13 +25,13 @@ Estas son las funcionalidades que tiene **PDF Quirk**:
 
 **PDF Quirk** está mantenido en [Github](https://github.com/dragotin/pdfquirk).
 
-La forma de utilizar **PDF Quirk** es tanto con los paquetes de software para la distribución deseada como mediante la AppImage que pueden ser descargadas desde aquí.
+La forma de utilizar **PDF Quirk** es tanto con los paquetes de software para la distribución deseada como mediante la AppImage, que pueden ser descargadas desde aquí.
 
 ### Publicaciones
 
-La publicación pública actual es la versión 0.95 que fue publicada el 30 de diciembre de 2021 [Changelog](Changelog.md)
+La publicación actual es la versión 0.95 que fue publicada el 30 de diciembre de 2021 [Changelog](Changelog.md)
 
-Está disponivle desde la [página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
+Está disponible desde la [página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
 
 ### Paquetes
 
@@ -49,7 +49,7 @@ Con la AppImage, **PDF Quirk** puede ser utilizada directamente en la mayoría d
 
 La rama de desarrollo del código fuente de **PDF Quirk** puede ser clonada desde la [página de Github](https://github.com/dragotin/pdfquirk).
 
-Los archivos tarballs de las publicaciones estables pueden ser encontrados en [la página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases).
+Los archivos tarballs de las publicaciones estables se pueden encontrar en [la página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases).
 
 Para compiar **PDF Quirk**, se necesita una configuración de desarrollo de Qt 5.x o Qt 6.x.
 
@@ -63,7 +63,7 @@ make
 make install
 ```
 
-Esto instalará pdfquirk en `/usr/local/bin` de su equipo.
+Esto instalará pdfquirk en la ruta `/usr/local/bin` de su equipo.
 
 ### Dependencias
 
@@ -111,7 +111,7 @@ Desde la versión 0.95 **PDF Quirk** admite algunas opciones básicas de PDF. En
 
 ![Opciones de PDF](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot_configoptions.png)
 
-Las configuraciones se quedan establecidad para todas las creaciones de PDF posteriores.
+Las configuraciones se quedan establecidas para todas las creaciones de PDF posteriores.
 
 ## Contribuciones
 
