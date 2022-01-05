@@ -1,7 +1,6 @@
 # PDF Quirk
 
 
-_You can also read this in [Spanish](README_es.md)_
 PDF Quirk is a little office helper tool to generate PDFs from images easily and fast to share them online.
 
 The source images can either be loaded from disk or directly be acquired from a scan device.
