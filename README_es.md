@@ -1,59 +1,59 @@
 # PDF Quirk
 
 
-PDF Quirk is a little office helper tool to generate PDFs from images easily and fast to share them online.
+**PDF Quirk** es una pequeña herramienta de oficinna de ayuda para generar archivos PDF a partir de imágenes de manera fácil y rápida para compartirlos en línea.
 
-The source images can either be loaded from disk or directly be acquired from a scan device.
+El origen de las imágenes pueden cargarse desde el disco de nuestro equipo u obtenerlas directamente desde un escáner.
 
 ![Screenshot](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot1.png)
 
-PDF Quirk utilizes specialized open source tools rather than reinventing the wheel.
+**PDF Quirk** utiliza herramientas de código abierto especializadas en vez de reinventar la rueda.
 
-## Features
+## Características
 
-These features are supported by PDF Quirk:
+Estas son las funcionalidades que tiene **PDF Quirk**:
 
-- Simple yet powerful and nice user interface for exactly one job.
-- Creation of high quality multi page PDF documents from images.
-- Small PDF file size, yet high quality.
-- Support for scanners through the SANE package.
-- Basic image manipulation like rotating images or sequence change.
-- Deskewing of scanned images
-- Basic PDF output options like margin, paper size and -orientation.
+- Una interfaz simple aunque potente agradable de utilizar para hacer exactamente su trabajo.
+- Creación de documentos PDF multipáginas de alta calidad desde imágenes.
+- Archivos PDF de pequeño tamaño, aunque de alta calidad.
+- Soporte para escáneres a través del paquete SANE.
+- Manipulación básica de imágenes como rotación de imágenes o cambio de secuencia.
+- Enderezamiento de las imágenes escaneadas.
+- Opciones de salida de PDF básicas como margen, tamaño de papel y orientación.
 
-## Downloads and Releases
+## Descargas y publicaciones
 
-PDF Quirk is maintained on [Github](https://github.com/dragotin/pdfquirk).
+**PDF Quirk** está mantenido en [Github](https://github.com/dragotin/pdfquirk).
 
-The recommended way of using PDF Quirk is either via packages from the distribution or via the AppImage that can be downloaded here.
+La forma de utilizar **PDF Quirk** es tanto con los paquetes de software para la distribución deseada como mediante la AppImage que pueden ser descargadas desde aquí.
 
-### Releases
+### Publicaciones
 
-The current public release is version 0.95 which was released on December, 30th, 2021. [Changelog](Changelog.md)
+La publicación pública actual es la versión 0.95 que fue publicada el 30 de diciembre de 2021 [Changelog](Changelog.md)
 
-It is available from the  [Github Release Page](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
+Está disponivle desde la [página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
 
-### Packages
+### Paquetes
 
-Not many Linux distros are packaging PDF Quirk yet - but packages for openSUSE are available from my [openSUSE Buildservice Page](https://software.opensuse.org/package/pdfquirk).
+Aún no muchas distribuciones de Linux tienen en sus paquetes **PDF Quirk**, pero hay paquetes disponibles para openSUSE desde mi [página de openSUSE Buildservice](https://software.opensuse.org/package/pdfquirk).
 
-As PDF Quirk improves, it will make it's way into the repositories of distributions. Stay tuned.
+A medida que **PDF Quirk** mejore, estará disponible en los repositorios de mas distribuciones. Permanezca al tanto de las novedades.
 
 ### AppImage
 
-PDF Quirk is available as an automatic built [AppImage](https://appimage.org/). It can be [downloaded from Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
+**PDF Quirk** está disponible como una compilación automática en formato [AppImage](https://appimage.org/). Puede ser [descargada desde Github](https://github.com/dragotin/pdfquirk/releases/tag/v0.95).
 
-With the AppImage, PDF Quirk can be used on most Linux installations right away. Just download the file, add executable permissions, and run. [How to run an AppImage](https://docs.appimage.org/introduction/quickstart.html#how-to-run-an-appimage)
+Con la AppImage, **PDF Quirk** puede ser utilizada directamente en la mayoría de las instalaciones de Linux. Simplemente descargue el archivo, añada permisos de ejecución y ejecute la aplicación. [Cómo ejecutar una AppImage (enlace en inglés)](https://docs.appimage.org/introduction/quickstart.html#how-to-run-an-appimage)
 
-### Building from Source
+### Compilado desde el código fuente
 
-The PDF Quirk source code development branch can be cloned on the [Github page](https://github.com/dragotin/pdfquirk).
+La rama de desarrollo del código fuente de **PDF Quirk** puede ser clonada desde la [página de Github](https://github.com/dragotin/pdfquirk).
 
-Stable release tarballs can be found on the [Github release page](https://github.com/dragotin/pdfquirk/releases).
+Los archivos tarballs de las publicaciones estables pueden ser encontrados en [la página de publicaciones de Github](https://github.com/dragotin/pdfquirk/releases).
 
-To build PDF Quirk, a Qt 5.x or Qt 6.x development setup is needed.
+Para compiar **PDF Quirk**, se necesita una configuración de desarrollo de Qt 5.x o Qt 6.x.
 
-Unpack the source archive and go to the top directory of the source. From there, perform the following steps:
+Desempaquete el archivo fuente y vaya al directorio superior de la fuente. A partir de ahí, realice los siguientes pasos:
 
 ```
 mkdir build
@@ -63,59 +63,59 @@ make
 make install
 ```
 
-This will install pdfquirk to `/usr/local/bin` on the computer.
+Esto instalará pdfquirk en `/usr/local/bin` de su equipo.
 
-### Runtime Dependencies
+### Dependencias
 
-At runtime, the tool [convert](https://imagemagick.org/script/convert.php) from the [ImageMagick](https://imagemagick.org/script/index.php)-package is needed. The utility `scanimage` from SANE is used for scanning (optional).
-It is recommended to install these through the package manager of the Linux distribution unless PDF Quirk is used through the AppImage.
+Para ejecutarse, se necesita la herramienta [convert](https://imagemagick.org/script/convert.php) del paquete [ImageMagick](https://imagemagick.org/script/index.php). La utilidad `scanimage` de SANE es utilizada para el escaneo de imágenes (opcional).
+Se recomienda instalarlos mediante el administrador de paquetes de su distribución de Linux, a menos que se utilice **PDF Quirk** mediante AppImage.
 
-To use deskewing for images, PDF Quirk optionally supports the tool [deskew](https://galfar.vevb.net/wp/projects/deskew/). If it is installed and available, it will be used to deskew images. Otherwise the convert deskew function is used.
+Para poder alinear las imágenes, **PDF Quirk** admite de manera opcional la herramienta [deskew](https://galfar.vevb.net/wp/projects/deskew/). Si está instalada y disponible, será utilizada para enderezar las imágenes. De lo contrario será utilizada la función de enderezar las imágenes.
 
-## Configuration
+## Configuración
 
-To configure PDF Quirk, open the configuration area by clicking the Configure menu item. Two editable lines allow to set a command line for monochrome and color scan.
+Para configurar **PDF Quirk**, abra el área de configuración haciendo clic en el campo del menú de Configurar. Dos líneas editables permiten establecer una línea de comando para escaneo monocromático y en color.
 
 ### SANE scanimage
 
-PDF Quirk uses the command line utility `scanimage` to produce images from the scanner. It comes with the SANE packages which are standard for scanners under linux.
+**PDF Quirk** utiliza la utilidad para la línea de comandos `scanimage` para obtener las imágenes desde un escáner. Viene con los paquetes SANE que son estándar para los escáneres en Linux.
 
-To scan with PDF Quirk, an optimal `scanimage` command for the scanner device must be found and put into the configuration. Since all the scanner devices are so different and offer different scan options, it does not make too much sense to set a default here.
+Para escanear con **PDF Quirk**, se debe encontrar y establecer en la configuración un comando `scanimage` òptimo para el escáner. Ya que todos los dispositivos son tan diferentes y ofrecen diferentes opciones de escaneo, no tiene mucho sentido establecer aquí unos valores predeterminados.
 
-To get a reasonable result for the PDF, the scan should
+Para obtener un resultado razonable para el PDF, el escaneo debe
 
-1. have a resolution of 150 or 200 dpi.
-2. be scanned in mode Grayscale for monochrome of Color.
-3. not have a too big color depth
+1. tener una resolución de 150 o 200 dpi,
+2. ser escaneado en modo escala de grises en monocromo o color,
+3. no tener una profundidad de color muy grande.
 
-Also be sure to configure the right scan size. PDF Quirk assumes that a whole page is scanned.
+Tanbién asegúrese de configurar el tamaño adecuado de escaneo. **PDF Quirk** asumirá que toda la página es escaneada.
 
-To learn more about the SANE project and the scanimage tool, refer to the [scanimage manpage](http://www.sane-project.org/man/scanimage.1.html) for details.
+Para aprender más sobre el proyecto SANE y la herramienta scanimage, puede encontrar más información en la [página de ayuda de scanimage](http://www.sane-project.org/man/scanimage.1.html).
 
-If you have a better way of producing images, it is also possible to make PDF Quirk use that.
+Si tiene una manera más adecuada de obtener las imágenes, también es posible hacer que **PDF Quirk** la utilice.
 
-`scanimage` by default sends the scanned image data to standard out. PDF Quirk is prepared to that and reads it from there.
+`scanimage` de manera predeterminada envía los datos de la imagen escaneada a la salida estándar. **PDF Quirk** está preparado para ello y recoge los datos desde allí.
 
-A typical scanimage command line might look like
+Una línea de comandos típica de scanimage podría tener un aspecto similar a este:
 ```
 scanimage --mode '24bit Color[Fast]' --resolution 150 -l 0 -t 0 -x 210 -y 297 --format png
 ```
 
-If another tool should be used to create PDF that writes its output directly to a file rather than to stdout, the commandline may contain the placeholder `%OUTFILE`. If that is in the command line string, PDF Quirk will replace that by a filename the tool can write to (From version 0.91 on).
+Si se debe usar otra herramienta para crear PDF que escriba su salida directamente en un archivo en lugar de en la salida estándar, la línea de comando puede contener el marcador de posición `%OUTFILE`. Si está en la cadena de línea de comando, **PDF Quirk** lo reemplazará por un nombre de archivo en el que la herramienta pueda escribir (desde la versión 0.91 en adelante).
 
-**Attention**: To quote command line parameters which contain spaces, use*single quotes*. Do not use double quotes, as PDF Quirks parser can not properly deal with that.
+**Atención**: Para citar los parámetros de la línea de comandos que contienen espacios, utilice *comillas simples*. No use comillas dobles, ya que el analizador **PDF Quirks** no puede manejarlo adecuadamente.
 
-### PDF Options
+### Opciones de PDF
 
-Since version 0.95 PDF Quirk supports some basic PDF options. On the configuration page, user can set the page size, the page orientation and the page margin.
+Desde la versión 0.95 **PDF Quirk** admite algunas opciones básicas de PDF. En la página de configuración, los usuarios pueden establecer el tamaño, la orientación o el margen de la página.
 
-![PDF Options](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot_configoptions.png)
+![Opciones de PDF](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot_configoptions.png)
 
-The settings are adjusted for all subsequent PDF creations.
+Las configuraciones se quedan establecidad para todas las creaciones de PDF posteriores.
 
-## Contributions
+## Contribuciones
 
-Please report wishes and bugs in the [Issue Tracker](https://github.com/dragotin/pdfquirk/issues).
+Por favor, informe de deseos y errores en el [seguidor de incidencias](https://github.com/dragotin/pdfquirk/issues).
 
-Pull requests that change code are very welcome!
+¡Los aportes de código son muy bienvenidos!
 

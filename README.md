@@ -2,13 +2,14 @@
 
 
 _You can also read this in [Spanish](README_es.md)_
-PDF Quirk is a little office helper tool to generate PDFs from images easily and fast to share them online.
+
+*PDF Quirk* is a little office helper tool to generate PDFs from images easily and fast to share them online.
 
 The source images can either be loaded from disk or directly be acquired from a scan device.
 
 ![Screenshot](https://github.com/dragotin/pdfquirk/raw/master/resources/screenshot1.png)
 
-PDF Quirk utilizes specialized open source tools rather than reinventing the wheel.
+*PDF Quirk* utilizes specialized open source tools rather than reinventing the wheel.
 
 ## Features
 
